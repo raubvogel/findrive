@@ -12,7 +12,7 @@ This script started life as a way for me to list the NVMe hard drives
 attached to a given host. As if now, output looks like this
 
 ``` bash
-[root@testbox ~]# ./pickles.py
+[root@testbox ~]# ./findrive.py
 {'pcipath': '0000:67:00.0', 'devname': 'nvme6n1', 'vendor+device': '8086:0A54'}
 {'pcipath': '0000:60:00.0', 'devname': 'nvme0n1', 'vendor+device': '8086:0A54'}
 {'pcipath': '0000:66:00.0', 'devname': 'nvme2n1', 'vendor+device': '8086:0A54'}
@@ -34,7 +34,7 @@ specific drives. In fact, if it is a NVMe hard drive, it is fair game. With
 that said, there is nothing stopping you from converting it into a comma separated list:
 
 ``` bash
-[root@testbox tests]# ~/pickles.py | cut -d \' -f4,8,12|tr \' \,
+[root@testbox tests]# ~/findrive.py | cut -d \' -f4,8,12|tr \' \,
 0000:67:00.0,nvme2n1,8086:0A54
 0000:60:00.0,nvme6n1,8086:0A54
 0000:66:00.0,nvme0n1,8086:0A54
