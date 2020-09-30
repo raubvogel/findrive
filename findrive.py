@@ -1,6 +1,13 @@
 #! /usr/bin/env python
 """ Scan computer for hard drives and list useful properties
 
+Output
+------
+List of hard drives, including
+- device name (as in /dev/devname)
+- PCI path (/sys/bus/pci/devices/pcipath)
+- vendor+device info
+
 Notes
 -----
 1: This started as a quick program to look for NVMe hard drives and
